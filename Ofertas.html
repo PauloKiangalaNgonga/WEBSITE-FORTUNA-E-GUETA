@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/css.css" />
+    <link rel="stylesheet" href="./css/css-main.css" />
+  </head>
+  <body>
+
+      <div class="dot" id="dot"></div>
+    <header>
+      <div class="container">
+        <img class="img-header" src="./Assets/img/logo/logotipo.png" alt="" />
+
+        <nav>
+          <div class="menu-lista">
+            <ul>
+              <li><a href="imdex.html" class="ativo">Menu</a></li>
+              <li><a href="Quem_Somos.html">Sobre</a></li>
+              <li><a href="servico.html">Serviços</a></li>
+              <li><a href="Ofertas.html">Ofertas</a></li>
+              <li><a href="Corpo-clinica.html">Corpo clínica</a></li>
+              <li><a href="Contactos.html">Falar Connosco</a></li>
+              <li><a href="#Contactos">Contactos</a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="linguagem"><span>&#127477;&#127481;</span>-PT</div>
+      </div>
+    </header>
+
+    <main>
+      <section class="servicos">
+        <div class="controlo">
+          <div class="barra">
+            <div class="container">
+              <div class="header-sobre">
+                <div class="titulos">
+                  <h1>Ofertas & Novidades</h1>
+                  <p>
+                    Descubra os nossos pacotes, campanhas e novidades pensadas
+                    para o seu bem-estar.
+                  </p>
+                </div>
+                <div class="img-header">
+                  <img src="./Assets/img/servicos/tetos.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="itens-servicos container">
+
+
+            <div class="carde-ofertas ">
+
+              <div class="carde-img-ofertas">
+                <img
+                class="img-oferta"
+                src="./Assets/img/servicos/gineclogia.png"
+                alt=""
+              />
+              <p>Disponivel</p>
+              <span>Agendar</span>
+              </div>
+
+               <div class="carde-img-ofertas">
+                <img
+                class="img-oferta"
+                src="./Assets/img/servicos/1 (2).png"
+                alt=""
+              />
+              <p>Disponivel</p>
+              <span>Agendar</span>
+              </div>
+
+               <div class="carde-img-ofertas">
+                <img
+                class="img-oferta"
+                src="./Assets/img/servicos/1 (1).png"
+                alt=""
+              />
+              <p>Disponivel</p>
+              <span>Agendar</span>
+              </div>
+
+               <div class="carde-img-ofertas">
+                <img
+                class="img-oferta"
+                src="./Assets/img/servicos/1 (3).png"
+                alt=""
+              />
+              <p>Disponivel</p>
+              <span>Agendar</span>
+              </div>
+
+
+               <div class="carde-img-ofertas">
+                <img
+                class="img-oferta"
+                src="./Assets/img/servicos/4.png"
+                alt=""
+              />
+              <p>Disponivel</p>
+              <span>Agendar</span>
+              </div>
+
+               <div class="carde-img-ofertas">
+                <img
+                class="img-oferta"
+                src="./Assets/img/servicos/5.png"
+                alt=""
+              />
+              <p>Disponivel</p>
+              <span>Agendar</span>
+              </div>
+
+            </div>
+
+            <div class="carde-opcao">
+              <div>
+                <h2><span class="numero">01</span> Consultas Médicas</h2>
+                <p class="paragrafo-servico">
+                  Atendimento realizado por profissionais qualificados em
+                  diversas áreas, com foco na promoção da saúde e no bem-estar
+                  dos pacientes.
+                </p>
+              </div>
+              <div class="btn-img">
+                <button type="button">VER MAIS SERVIÇOS</button>
+                <img
+                  class="Img-servico"
+                  src="./Assets/img/icon/arrow.png"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL MARCAR ACONSULTA -->
+          <!-- MODAL MARCAR CONSULTA -->
+<div class="container-modal" id="modal">
+  <div class="carde-modal">
+
+    <div class="titulo-modal">
+      <h2>Agendar Consulta</h2>
+      <span id="fechar">&times;</span>
+    </div>
+
+    <form id="form-agendamento">
+
+      <div class="inputs-modal">
+        <label for="nome">Nome completo</label>
+        <input id="nome" type="text" placeholder="Nome completo" required>
+      </div>
+
+      <div class="inputs-modal">
+        <label for="consulta">Tipo de consulta</label>
+        <input id="consulta" type="text" placeholder="Tipo de consulta" required>
+      </div>
+
+      <div class="inputs-modal">
+        <label for="data">Data da marcação</label>
+        <input id="data" type="date" required>
+      </div>
+
+      <div class="inputs-modal">
+        <label for="hora">Horário</label>
+        <input id="hora" type="time" required>
+      </div>
+
+      <div class="inputs-modal">
+        <label for="telefone">Telefone</label>
+        <input 
+          id="telefone" 
+          type="tel" 
+          placeholder="+244 9XX XXX XXX" 
+          required
+        >
+      </div>
+
+      <div class="botons-modal">
+        <button id="marcar" type="submit">Marcar</button>
+        <button id="cancelar" type="button">Cancelar</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+
+          <div class="servico">
+            <div class="barra-copmpromisso">
+              <div class="titulo-opcao">
+                <h1>Vamos Agendar Um compromisso?</h1>
+                <p>
+                  disponibilizamos uma ampla gama de serviços de saúde, com foco
+                  na prevenção,
+                </p>
+                 
+                <button id="btn-agendar"   class="btn-agendar" type="button">Agendar Agora</button>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+    </main>
+
+    <!-- fotter -->
+
+    <footer class="rodape">
+      <section id="Contactos">
+        <div class="carde-rodape container">
+          <div class="dados-img">
+            <img src="./Assets/img/logo/logotipo.png" alt="" />
+            <p>
+              Cuidamos da sua saúde com profissionalismo, dedicação e
+              humanização.
+            </p>
+          </div>
+
+          <div class="dados-links">
+            <h2>Links rápidos</h2>
+            <ul class="lista-rodape">
+              <li><a href="imdex.html" class="ativo">Menu</a></li>
+              <li><a href="Quem_Somos.html">Sobre</a></li>
+              <li><a href="servico.html">Serviços</a></li>
+              <li><a href="">Ofertas</a></li>
+              <li><a href="#">Corpo clínica</a></li>
+              <li><a href="#">Falar Connosco</a></li>
+            </ul>
+          </div>
+
+          <div class="dados-contactos">
+            <h2>Contactos</h2>
+            <div class="dados-endereco">
+              <span>ENDEREÇO</span>
+              <p>
+                Rua 21 de Janeiro, Travessa dos Generais, Casa n.º 75, depois do
+                Morro Bento
+              </p>
+            </div>
+
+            <div class="dados-endereco">
+              <span>TELEFONE</span>
+              <p>+244 944 233 444 +244 950 930 208.</p>
+              <p>+244 944 233 444 +244 950 930 208.</p>
+            </div>
+
+            <div class="dados-endereco">
+              <span>EMAIL</span>
+              <p>centromedicofortuna.gueta@gmail.com</p>
+              <p>medicinaocupacional.fg@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="redes-sociais">
+          <img class="img-redes" src="./Assets/img/icon/facebook.png" alt="" />
+          <img class="img-redes" src="./Assets/img/icon/instagram.png" alt="" />
+          <img class="img-redes" src="./Assets/img/icon/linkedin.png" alt="" />
+        </div>
+
+        <div class="rodapre-tirulo">
+          <p>&copy; 2026 direitos reservados centro médico fortuna e Gueta</p>
+        </div>
+      </section>
+    </footer>
+   
+  </body>
+</html>
+ 
+<script src="./javaScrip/js.js"></script>
+
+<!-- BIBLIOTECA PARA GERAR PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+
+document.getElementById("btn-agendar").addEventListener("click", function () {
+
+    document.getElementById("modal").style.display = "flex";
+
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // ============================
+    // ELEMENTOS DO MODAL
+    // ============================
+
+    const modal = document.getElementById("modal");
+    const fechar = document.getElementById("fechar");
+    const cancelar = document.getElementById("cancelar");
+    const form = document.getElementById("form-agendamento");
+
+    // Número do WhatsApp da clínica
+    const whatsapp = "244934790869";
+
+
+    // ============================
+    // FECHAR MODAL
+    // ============================
+
+    fechar.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+
+    cancelar.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+
+    // Fechar clicando fora
+    modal.addEventListener("click", function (e) {
+
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+
+    });
+
+
+    // ============================
+    // QUANDO CLICAR EM MARCAR
+    // ============================
+
+    form.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+
+        // ============================
+        // PEGAR OS DADOS
+        // ============================
+
+        const nome =
+            document.getElementById("nome").value.trim();
+
+        const consulta =
+            document.getElementById("consulta").value.trim();
+
+        const data =
+            document.getElementById("data").value;
+
+        const hora =
+            document.getElementById("hora").value;
+
+        const telefone =
+            document.getElementById("telefone").value.trim();
+
+
+        // ============================
+        // VERIFICAR CAMPOS
+        // ============================
+
+        if (!nome || !consulta || !data || !hora || !telefone) {
+
+            alert("Preencha todos os campos.");
+
+            return;
+        }
+
+
+        // ============================
+        // FORMATAR DATA
+        // ============================
+
+        const dataFormatada =
+            new Date(data + "T00:00:00")
+            .toLocaleDateString("pt-PT");
+
+
+        // ============================
+        // GERAR PDF
+        // ============================
+
+        const { jsPDF } = window.jspdf;
+
+        const pdf = new jsPDF();
+
+
+        // Cabeçalho
+        pdf.setFontSize(18);
+
+        pdf.text(
+            "CENTRO MÉDICO FORTUNA & GUETA",
+            20,
+            25
+        );
+
+
+        pdf.setFontSize(12);
+
+        pdf.text(
+            "CONFIRMAÇÃO DE AGENDAMENTO",
+            20,
+            38
+        );
+
+
+        pdf.line(20, 45, 190, 45);
+
+
+        // Dados
+        pdf.setFontSize(13);
+
+        pdf.text(
+            "Dados da Consulta",
+            20,
+            60
+        );
+
+
+        pdf.setFontSize(11);
+
+        pdf.text(
+            "Nome: " + nome,
+            20,
+            75
+        );
+
+        pdf.text(
+            "Telefone: " + telefone,
+            20,
+            87
+        );
+
+        pdf.text(
+            "Tipo de consulta: " + consulta,
+            20,
+            99
+        );
+
+        pdf.text(
+            "Data: " + dataFormatada,
+            20,
+            111
+        );
+
+        pdf.text(
+            "Horário: " + hora,
+            20,
+            123
+        );
+
+
+        pdf.line(20, 135, 190, 135);
+
+
+        pdf.text(
+            "O seu pedido de agendamento foi registado.",
+            20,
+            150
+        );
+
+        pdf.text(
+            "A nossa equipa irá confirmar a disponibilidade.",
+            20,
+            162
+        );
+
+
+        // Rodapé
+        pdf.setFontSize(9);
+
+        pdf.text(
+            "Centro Médico Fortuna & Gueta",
+            20,
+            280
+        );
+
+        pdf.text(
+            "Serviços de Saúde e Medicina Ocupacional",
+            20,
+            287
+        );
+
+
+        // ============================
+        // DOWNLOAD DO PDF
+        // ============================
+
+        pdf.save(
+            "Agendamento-" +
+            nome.replace(/\s+/g, "-") +
+            ".pdf"
+        );
+
+
+        // ============================
+        // MENSAGEM DO WHATSAPP
+        // ============================
+
+        const mensagem = `Olá, Centro Médico Fortuna & Gueta.
+
+Gostaria de solicitar um agendamento.
+
+DADOS DO PACIENTE:
+
+Nome: ${nome}
+Telefone: ${telefone}
+Tipo de consulta: ${consulta}
+Data: ${dataFormatada}
+Horário: ${hora}
+
+Aguardo a confirmação da disponibilidade.
+
+Obrigado.`;
+
+
+        // Codificar mensagem
+        const mensagemCodificada =
+            encodeURIComponent(mensagem);
+
+
+        // Criar link
+        const link =
+            "https://wa.me/" +
+            whatsapp +
+            "?text=" +
+            mensagemCodificada;
+
+
+        // ============================
+        // ABRIR WHATSAPP
+        // ============================
+
+        window.open(link, "_blank");
+
+
+        // ============================
+        // LIMPAR FORMULÁRIO
+        // ============================
+
+        form.reset();
+
+
+        // Fechar modal
+        modal.style.display = "none";
+
+    });
+
+});
+
+</script>

@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="pt-AO">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Centro Médico Fortuna e Gueta. Consultas, exames e medicina ocupacional num só lugar, com atendimento humanizado." />
+  <title>Centro Médico Fortuna e Gueta | Início</title>
+  <link rel="stylesheet" href="./css/css.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <a href="index.html">
+        <img class="img-header" src="./Assets/img/logo/logotipo.png" alt="Logotipo do Centro Médico Fortuna e Gueta" />
+      </a>
+
+      <nav>
+        <div class="menu-lista">
+          <ul>
+            <li><a href="imdex.html" class="ativo">Menu</a></li>
+            <li><a href="Quem_Somos.html">Sobre</a></li>
+            <li><a href="servico.html">Serviços</a></li>
+            <li><a href="Ofertas.html">Ofertas</a></li>
+            <li><a href="Corpo-clinica.html">Corpo clínica</a></li>
+            <li><a href="#">Falar Connosco</a></li>
+            <li><a href="#Contactos">Contactos</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="linguagem">PT</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="video-container">
+      <video autoplay loop muted playsinline>
+        <source src="./Assets/video/1_1.mp4" type="video/mp4" />
+      </video>
+      <div class="overley"></div>
+    </div>
+
+    <div class="dot" id="dot"></div>
+
+    <section class="forma">
+      <div class="hero">
+        <div>
+          <h1 class="titulo-hero">
+            Cuidamos da sua <br />
+            saúde com excelência <br />
+            e confiança.
+          </h1>
+
+          <p class="subtitulo-hero">
+            Consultas, exames e medicina ocupacional num só lugar, <br />
+            com atendimento humanizado e profissionais qualificados
+          </p>
+
+          <div class="btn-hero">
+            <button id="btn-abrir-opcao" type="button">Agendar Consulta</button>
+            <img class="img-hero" src="./Assets/img/icon/arrow.png" alt="" />
+          </div>
+        </div>
+
+        <div class="OPCAOES-DAS-MARCACOES">
+          <span class="SOS">SOS</span>
+          <div class="Apoio">
+            <button type="button" id="Inf">
+              <img class="img-acesso-rapido" src="./Assets/img/icon/customer-service.png" alt="" srcset="" />
+            </button>
+          </div>
+
+          <div class="Apoio">
+            <button type="button" id="">
+              <img class="img-acesso-rapido" src="./Assets/img/icon/calendar.png" alt="" srcset="" />
+            </button>
+          </div>
+
+          <div class="Apoio">
+            <button type="button">
+              <img class="img-acesso-rapido" src="./Assets/img/icon/whatsapp.png" alt="" srcset="" />
+            </button>
+          </div>
+        </div>
+
+        <!--MODAL OPCAO CONSULTA-->
+
+        <div class="fecharOpcao " id="Fechar_opcao">
+          <div class="fecharCruz">
+            <span id="fechar-modal-opcao" class="fechar">+</span>
+          </div>
+
+          <div class="cardes-opcao">
+            <div class="titulo-opcap">
+              <h1>AGENDAR CONSULTA!</h1>
+              <p>Escolha a sua opção:</p>
+            </div>
+
+            <div class="btn-opcoes">
+              <div class="btn-opcao-video">
+                <img class="img-opcao" src="/Assets/img/icon/video.png " alt="" srcset="" />
+                <button class="btn-chamadaVideo" type="button">
+                  Consulta video
+                </button>
+              </div>
+
+              <div class="btn-opcao-video">
+                <img class="img-opcao-1" src="/Assets/img/icon/calendar.png" alt="img-video" />
+                <button id="btn-agendar" class="btn-chamadanormal" type="button">
+                  Consulta NORMAL
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--FIM MODAL OPCAO CONSULTA-->
+
+        <!-- MODAL MARCAR CONSULTA -->
+        <div class="container-modal" id="modal">
+          <div class="carde-modal">
+            <div class="titulo-modal">
+              <h2>Agendar Consulta</h2>
+              <span id="fechar">&times;</span>
+            </div>
+
+            <form id="form-agendamento">
+              <div class="inputs-modal">
+                <label for="nome">Nome completo</label>
+                <input id="nome" type="text" placeholder="Nome completo" required />
+              </div>
+
+              <div class="inputs-modal">
+                <label for="consulta">Tipo de consulta</label>
+                <input id="consulta" type="text" placeholder="Tipo de consulta" required />
+              </div>
+
+
+
+              <div class="inputs-modal">
+                <label for="data">Data da marcação</label>
+                <input id="data" type="date" required />
+              </div>
+
+              <div class="inputs-modal">
+                <label for="hora">Horário</label>
+                <input id="hora" type="time" required />
+              </div>
+
+              <div class="inputs-modal">
+                <label for="telefone">Telefone</label>
+                <input id="telefone" type="tel" placeholder="+244 9XX XXX XXX" required />
+              </div>
+
+              <div class="inputs-modal">
+                <label for="email">Email (opcional)</label>
+                <input id="email" type="email" placeholder="exemplo@email.com" />
+              </div>
+
+              <div class="botons-modal">
+                <button id="marcar" type="submit">Marcar</button>
+                <button id="cancelar" type="button">Cancelar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- MODAL INFO -->
+
+        <div class="Modal-inf" id="caida-modal">
+          <div class="caida-modal">
+            <div class="titulo-modal">
+              <h2>Acesso Rápido</h2>
+              <span id="fechar-modal">&times;</span>
+            </div>
+
+            <div class="medicina-trabalho">
+              <h2>Saúde Ocupacional</h2>
+              <span>TELEFONE</span>
+              <p><a href="tel:+244944233444">+244 944 233 444</a></p>
+              <p><a href="tel:+244950930208">+244 950 930 208</a></p>
+              <p>
+                <a href="mailto:medicinaocupacional.fg@gmail.com">medicinaocupacional.fg@gmail.com</a>
+              </p>
+            </div>
+
+            <div class="medicina-trabalho">
+              <h2>Linha de Apoio</h2>
+              <span>TELEFONE</span>
+              <p><a href="tel:+244944233444">+244 944 233 444</a></p>
+              <p><a href="tel:+244950930208">+244 950 930 208</a></p>
+              <p class="email">
+                <a href="mailto:medicinaocupacional.fg@gmail.com">medicinaocupacional.fg@gmail.com</a>
+              </p>
+
+              <div class="horario">
+                <span class="horario">Horário de Funcionalidade</span>
+                <p>Seg-feira: <span>08:00 - 20:00</span></p>
+                <p>Ter-feira: <span>08:00 - 20:00</span></p>
+                <p>Quart-feira: <span>08:00 - 20:00</span></p>
+                <p>Quint-feira: <span>08:00 - 20:00</span></p>
+                <p>Sext-feira: <span>08:00 - 20:00</span></p>
+                <p>Sáb: <span>08:00 - 16:00</span></p>
+                <p>Dom: <span>Fechado</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="barra">
+        <div class="container">
+          <div class="header-sobre">
+            <div class="titulos">
+              <h1>Cuidado que gera confiança.</h1>
+              <p>
+                No Centro Médico Fortuna e Gueta, cada número representa uma
+                pessoa cuidada com atenção, rigor e respeito.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carde-numeros container">
+        <div class="caixa-nuemros">
+          <h2>10 <span>+</span></h2>
+          <p class="paragrafos">Seguidores</p>
+          <p>uma comunidade que acompanha e confia no nosso trabalho</p>
+        </div>
+
+        <div class="caixa-nuemros">
+          <h2>12000 <span>+</span></h2>
+          <p class="paragrafos">Pacientes atendidos</p>
+          <p>vidas cuidadas com dedicação e profissionalismo</p>
+        </div>
+
+        <div class="caixa-nuemros">
+          <h2>500 <span>+</span></h2>
+          <p class="paragrafos">Exames do laboratório</p>
+          <p>resultados fiáveis para diagnósticos precisos</p>
+        </div>
+
+        <div class="caixa-nuemros">
+          <h2>10 <span></span></h2>
+          <p class="paragrafos">Especialidades</p>
+          <p>vários cuidados num só lugar</p>
+        </div>
+      </div>
+
+      <div class="barra-clientes">
+        <div class="container">
+          <div class="header-sobre">
+            <div class="titulos">
+              <h1>Pacientes que confiam em nós.</h1>
+              <p>
+                Conheça a experiência de quem confia no nosso atendimento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carde-pacientes container">
+        <div class="testemunhos">
+          <div>
+            <img class="img-testemunfo" src="./Assets/img/testemunhos/img.jfif" alt="" />
+          </div>
+          <div class="nome-paciente">
+            <h2>Catarina de Oliveira</h2>
+            <p>Testemunho</p>
+            <span>Fui atendida com muita atenção e sem demora. O médico explicou
+              tudo com calma e saí de lá mais tranquila.</span>
+          </div>
+        </div>
+
+        <div class="testemunhos">
+          <div>
+            <img class="img-testemunfo" src="./Assets/img/testemunhos/img.jfif" alt="" />
+          </div>
+          <div class="nome-paciente">
+            <h2>Catarina de Oliveira</h2>
+            <p>Testemunho</p>
+            <span>Fui atendida com muita atenção e sem demora. O médico explicou
+              tudo com calma e saí de lá mais tranquila.</span>
+          </div>
+        </div>
+
+        <div class="testemunhos">
+          <div>
+            <img class="img-testemunfo" src="./Assets/img/testemunhos/img.jfif" alt="" />
+          </div>
+          <div class="nome-paciente">
+            <h2>Catarina de Oliveira</h2>
+            <p>Testemunho</p>
+            <span>Fui atendida com muita atenção e sem demora. O médico explicou
+              tudo com calma e saí de lá mais tranquila.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer -->
+  <footer class="rodape">
+    <section id="Contactos">
+      <div class="carde-rodape container">
+        <div class="dados-img">
+          <img src="./Assets/img/logo/logotipo.png" alt="Logotipo do Centro Médico Fortuna e Gueta" />
+          <p>
+            Cuidamos da sua saúde com profissionalismo, dedicação e
+            humanização.
+          </p>
+        </div>
+
+        <div class="dados-links">
+          <h2>Links rápidos</h2>
+          <ul class="lista-rodape">
+            <li><a href="index.html" class="ativo">Início</a></li>
+            <li><a href="Quem_Somos.html">Sobre</a></li>
+            <li><a href="servico.html">Serviços</a></li>
+            <li><a href="Ofertas.html">Ofertas</a></li>
+            <li><a href="Corpo-clinica.html">Corpo clínica</a></li>
+            <li><a href="Contactos.html">Falar Connosco</a></li>
+          </ul>
+        </div>
+
+        <div class="dados-contactos">
+          <h2>Contactos</h2>
+
+          <div class="dados-endereco">
+            <span>ENDEREÇO</span>
+            <p>
+              Rua 21 de Janeiro, Travessa dos Generais, Casa n.º 75, depois do
+              Morro Bento
+            </p>
+          </div>
+
+          <div class="dados-endereco">
+            <span>TELEFONE</span>
+            <p><a href="tel:+244944233444">+244 944 233 444</a></p>
+            <p><a href="tel:+244950930208">+244 950 930 208</a></p>
+          </div>
+
+          <div class="dados-endereco">
+            <span>EMAIL</span>
+            <p>
+              <a href="mailto:centromedicofortuna.gueta@gmail.com">centromedicofortuna.gueta@gmail.com</a>
+            </p>
+            <p>
+              <a href="mailto:medicinaocupacional.fg@gmail.com">medicinaocupacional.fg@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="redes-sociais">
+        <a href="https://www.facebook.com/" aria-label="Facebook">
+          <img class="img-redes" src="./Assets/img/icon/facebook.png" alt="Facebook" />
+        </a>
+        <a href="#" aria-label="Instagram">
+          <img class="img-redes" src="./Assets/img/icon/instagram.png" alt="Instagram" />
+        </a>
+        <a href="#" aria-label="LinkedIn">
+          <img class="img-redes" src="./Assets/img/icon/linkedin.png" alt="LinkedIn" />
+        </a>
+      </div>
+
+      <div class="rodapre-tirulo">
+        <p>
+          &copy; 2026 Todos os direitos reservados. Centro Médico Fortuna e
+          Gueta
+        </p>
+      </div>
+    </section>
+  </footer>
+
+  <script src="./javaScrip/js.js" defer></script>
+</body>
+
+</html>
+
+<!-- BIBLIOTECA PARA GERAR PDF -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+  // =====================================================
+  // ELEMENTOS
+  // =====================================================
+
+  const modal = document.getElementById("modal");
+  const fechar = document.getElementById("fechar");
+  const cancelar = document.getElementById("cancelar");
+  const form = document.getElementById("form-agendamento");
+  const botaoAgendar = document.getElementById("btn-agendar");
+
+  // =====================================================
+  // CONFIGURAÇÃO
+  // =====================================================
+
+  const whatsapp = "244934790869";
+
+  const URL_SCRIPT =
+    "https://script.google.com/macros/s/AKfycbwnBhyYb0tjAjdfN6fJTNVaoyXGJolo7HI5rRJ8a7WbxBqsBmdqJmPtaRL8dcPAhBeU/exec";
+
+  const CHAVE = "automacaoGueta";
+
+
+  // =====================================================
+  // VERIFICAR SE OS ELEMENTOS EXISTEM
+  // =====================================================
+
+  if (!form) {
+    console.error("ERRO: form-agendamento não encontrado.");
+    return;
+  }
+
+  if (!botaoAgendar) {
+    console.error("ERRO: btn-agendar não encontrado.");
+    return;
+  }
+
+
+  // =====================================================
+  // ABRIR MODAL
+  // =====================================================
+
+  botaoAgendar.addEventListener("click", function () {
+
+    if (modal) {
+      modal.style.display = "flex";
+    }
+
+  });
+
+
+  // =====================================================
+  // FECHAR MODAL
+  // =====================================================
+
+  if (fechar) {
+
+    fechar.addEventListener("click", function () {
+
+      modal.style.display = "none";
+
+    });
+
+  }
+
+
+  if (cancelar) {
+
+    cancelar.addEventListener("click", function () {
+
+      modal.style.display = "none";
+
+    });
+
+  }
+
+
+  if (modal) {
+
+    modal.addEventListener("click", function (e) {
+
+      if (e.target === modal) {
+
+        modal.style.display = "none";
+
+      }
+
+    });
+
+  }
+
+
+  // =====================================================
+  // ENVIAR AGENDAMENTO
+  // =====================================================
+
+  form.addEventListener("submit", async function (e) {
+
+    e.preventDefault();
+
+
+    // ===================================================
+    // PEGAR DADOS DO FORMULÁRIO
+    // ===================================================
+
+    const nome =
+      document.getElementById("nome")?.value.trim() || "";
+
+    const consulta =
+      document.getElementById("consulta")?.value.trim() || "";
+
+    const data =
+      document.getElementById("data")?.value || "";
+
+    const hora =
+      document.getElementById("hora")?.value || "";
+
+    const telefone =
+      document.getElementById("telefone")?.value.trim() || "";
+
+    const campoEmail =
+      document.getElementById("email");
+
+    const email =
+      campoEmail
+        ? campoEmail.value.trim()
+        : "";
+
+
+    // ===================================================
+    // VALIDAR
+    // ===================================================
+
+    if (
+      !nome ||
+      !consulta ||
+      !data ||
+      !hora ||
+      !telefone
+    ) {
+
+      alert(
+        "Preencha todos os campos obrigatórios."
+      );
+
+      return;
+
+    }
+
+
+    // ===================================================
+    // MOSTRAR ESTADO
+    // ===================================================
+
+    if (botaoAgendar) {
+
+      botaoAgendar.disabled = true;
+      botaoAgendar.textContent = "A enviar...";
+
+    }
+
+
+    // ===================================================
+    // PREPARAR DADOS
+    // ===================================================
+
+    const dados = new URLSearchParams();
+
+    dados.append("chave", CHAVE);
+    dados.append("nome", nome);
+    dados.append("consulta", consulta);
+    dados.append("dataConsulta", data);
+    dados.append("hora", hora);
+    dados.append("telefone", telefone);
+    dados.append("email", email);
+
+
+    console.log(
+      "A enviar agendamento:",
+      Object.fromEntries(dados)
+    );
+
+
+    // ===================================================
+    // ENVIAR PARA GOOGLE APPS SCRIPT
+    // ===================================================
+
+    try {
+
+      await fetch(
+        URL_SCRIPT,
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type":
+              "application/x-www-form-urlencoded;charset=UTF-8"
+          },
+          body: dados.toString()
+        }
+      );
+
+
+      console.log(
+        "Pedido enviado para o Google Apps Script."
+      );
+
+
+      // =================================================
+      // FORMATAR DATA PARA O PDF
+      // =================================================
+
+      const partesData =
+        data.split("-");
+
+      let dataFormatada = data;
+
+      if (partesData.length === 3) {
+
+        dataFormatada =
+          partesData[2] +
+          "/" +
+          partesData[1] +
+          "/" +
+          partesData[0];
+
+      }
+
+
+      // =================================================
+      // GERAR PDF
+      // =================================================
+
+      if (
+        window.jspdf &&
+        window.jspdf.jsPDF
+      ) {
+
+        const {
+          jsPDF
+        } = window.jspdf;
+
+        const pdf =
+          new jsPDF();
+
+
+        pdf.setFontSize(18);
+
+        pdf.text(
+          "CENTRO MÉDICO FORTUNA & GUETA",
+          20,
+          25
+        );
+
+
+        pdf.setFontSize(12);
+
+        pdf.text(
+          "CONFIRMAÇÃO DE AGENDAMENTO",
+          20,
+          38
+        );
+
+
+        pdf.line(
+          20,
+          45,
+          190,
+          45
+        );
+
+
+        pdf.setFontSize(13);
+
+        pdf.text(
+          "Dados da Consulta",
+          20,
+          60
+        );
+
+
+        pdf.setFontSize(11);
+
+        pdf.text(
+          "Nome: " + nome,
+          20,
+          75
+        );
+
+        pdf.text(
+          "Telefone: " + telefone,
+          20,
+          87
+        );
+
+        pdf.text(
+          "Tipo de consulta: " + consulta,
+          20,
+          99
+        );
+
+        pdf.text(
+          "Data: " + dataFormatada,
+          20,
+          111
+        );
+
+        pdf.text(
+          "Horário: " + hora,
+          20,
+          123
+        );
+
+
+        pdf.line(
+          20,
+          135,
+          190,
+          135
+        );
+
+
+        pdf.text(
+          "O seu pedido de agendamento foi registado.",
+          20,
+          150
+        );
+
+        pdf.text(
+          "A nossa equipa irá confirmar a disponibilidade.",
+          20,
+          162
+        );
+
+
+        pdf.setFontSize(9);
+
+        pdf.text(
+          "Centro Médico Fortuna & Gueta",
+          20,
+          280
+        );
+
+        pdf.text(
+          "Serviços de Saúde e Medicina Ocupacional",
+          20,
+          287
+        );
+
+
+        pdf.save(
+          "Agendamento-" +
+          nome.replace(/\s+/g, "-") +
+          ".pdf"
+        );
+
+      }
+
+
+      // =================================================
+      // WHATSAPP
+      // =================================================
+
+      const mensagem =
+`Olá, Centro Médico Fortuna & Gueta.
+
+Gostaria de solicitar um agendamento.
+
+DADOS DO PACIENTE:
+
+Nome: ${nome}
+Telefone: ${telefone}
+Tipo de consulta: ${consulta}
+Data: ${dataFormatada}
+Horário: ${hora}
+
+Aguardo a confirmação da disponibilidade.
+
+Obrigado.`;
+
+
+      const link =
+        "https://wa.me/" +
+        whatsapp +
+        "?text=" +
+        encodeURIComponent(mensagem);
+
+
+      // =================================================
+      // ABRIR WHATSAPP
+      // =================================================
+
+      window.open(
+        link,
+        "_blank"
+      );
+
+
+      // =================================================
+      // LIMPAR
+      // =================================================
+
+      form.reset();
+
+      if (modal) {
+        modal.style.display = "none";
+      }
+
+
+      alert(
+        "Pedido de agendamento enviado com sucesso!"
+      );
+
+
+    } catch (erro) {
+
+      console.error(
+        "Erro ao enviar:",
+        erro
+      );
+
+
+      alert(
+        "Não foi possível enviar o agendamento. Tente novamente."
+      );
+
+    }
+
+
+    // ===================================================
+    // RESTAURAR BOTÃO
+    // ===================================================
+
+    if (botaoAgendar) {
+
+      botaoAgendar.disabled = false;
+      botaoAgendar.textContent = "Agendar";
+
+    }
+
+  });
+
+});
+
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerar PDF</title>
+</head>
+
+<body>
+
+    <h2>Gerar PDF</h2>
+
+    <input type="text" id="nome" placeholder="Nome">
+    <input type="text" id="telefone" placeholder="Telefone">
+
+    <button onclick="gerarPDF()">Gerar PDF</button>
+
+    <script src="./JS/jspdf.umd.min.js"></script>
+
+    <script>
+
+        function gerarPDF() {
+
+            // Verificar se a biblioteca foi carregada
+            console.log(window.jspdf);
+
+            if (!window.jspdf) {
+                alert("A biblioteca jsPDF não foi carregada!");
+                return;
+            }
+
+            const { jsPDF } = window.jspdf;
+
+            const nome = document.getElementById("nome").value;
+            const telefone = document.getElementById("telefone").value;
+
+            const pdf = new jsPDF();
+
+            pdf.setFontSize(18);
+            pdf.text("Ficha de Atendimento", 20, 20);
+
+            pdf.setFontSize(12);
+            pdf.text("Nome: " + nome, 20, 40);
+            pdf.text("Telefone: " + telefone, 20, 50);
+
+            pdf.save("ficha-atendimento.pdf");
+        }
+
+    </script>
+
+</body>
+</html>

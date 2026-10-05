@@ -1,0 +1,119 @@
+:root{
+    --Cor-branco:#fff;
+    --Cor-preta:#000;
+    --Cor-vermelho:#ff0000;
+    --ng-preto-light:#5e5c5c;
+    --margem-top: 3rem;
+}
+@font-face {
+    font-family: "poppins";
+    src: url(/font/Poppins-ExtraLight.ttf);
+}
+body{
+    font-family: "poppins";
+   
+     
+}   
+header{ 
+     z-index: 4;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    
+    background-color: rgba(255, 255, 255);
+    
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .menu-lista ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+     
+   
+}
+.menu-lista ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+     
+}.menu-lista a{
+    text-decoration: none;
+    color: var(--Cor-vermelho);
+    position: relative;
+    z-index: 6;
+     
+} 
+ 
+.menu-lista a::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%);
+     transition: all 1s ease;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+}
+.menu-lista a.ativo::before{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%);
+     transition: all 1s ease;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background-color: #ff0000;
+    
+}
+ 
+.menu-lista a:hover::before{
+    background-color: #ff0000;
+     
+}
+.submenu{
+     display: none;
+}
+.img-header{
+    width: 105px;
+}
+.img-submenu{
+    width: 15px;
+    transform: rotate(90deg);
+}
+
+/* linguagem */
+
+.linguagem{
+    background: rgba(0,0,0,0.3);
+    padding: 8px 14px;
+    font-size: 0,85rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    color: var(--Cor-branco);
+}
+.linguagem:hover{
+    background: rgba(205, 3, 3, 0.3);
+     
+}
+ 
+.Submenu-linguagem li{
+    list-style: none;z-index: 22;
+    color: var(--Cor-branco);
+}
+.Submenu-linguagem{
+    background-color: var(--ng-preto-light);
+    padding: 5px 8px;
+    border-radius: 5px;
+    
+}

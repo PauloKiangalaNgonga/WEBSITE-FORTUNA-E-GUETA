@@ -1,0 +1,1459 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Cor-branco: #fff;
+    --Cor-preta: #000;
+    --Cor-vermelho: #ff0000;
+    --ng-preto-light: #5e5c5c;
+    --margem-top: 3rem;
+    --Paragrafo: 15px;
+}
+
+/* Se tiveres mais pesos da Poppins (Regular, SemiBold, Bold), declara cada um aqui.
+   Ou usa Google Fonts no HTML, que é mais simples. */
+@font-face {
+    font-family: "poppins";
+    src: url("../font/Poppins-ExtraLight.ttf");
+    font-weight: 200;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Efeito dot */
+.dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background-color: var(--Cor-branco);
+    border-radius: 999px;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.dot::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--Cor-vermelho);
+    border-radius: 999px;
+    transform: translate(-50%, -50%);
+}
+
+/* header */
+.container {
+    max-width: 1420px;
+    padding: 1rem 24px;
+    margin: 0 auto;
+}
+
+header {
+    z-index: 4;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .menu-lista ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+}
+
+.menu-lista a {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    z-index: 6;
+}
+
+.menu-lista a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translate(-50%);
+    transition: all 0.3s ease;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+}
+
+.menu-lista a.ativo::before,
+.menu-lista a:hover::before {
+    background-color: var(--Cor-vermelho);
+}
+
+.submenu {
+    display: none;
+}
+
+.img-header {
+    width: 105px;
+}
+
+.img-submenu {
+    width: 15px;
+    transform: rotate(90deg);
+}
+
+/* linguagem */
+.linguagem {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    border-radius: 5px;
+    transition: all 0.1s ease;
+    color: var(--Cor-branco);
+}
+
+.linguagem:hover {
+    background: rgba(205, 3, 3, 0.3);
+}
+
+.Submenu-linguagem {
+    background-color: var(--ng-preto-light);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.Submenu-linguagem li {
+    list-style: none;
+    z-index: 22;
+    color: var(--Cor-branco);
+}
+
+/* video e hero */
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.video-container video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+}
+
+.overley {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+main {
+    position: relative;
+    margin-bottom: 2px;
+}
+
+.hero {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+    max-width: 1425px;
+    padding: 1rem 84px;
+    margin: 0 auto;
+}
+.cardes-opcao{
+     backdrop-filter: blur(34px);
+    padding: 15px 34px;
+    border-radius: 15px;
+}
+.img-opcao {
+    position: absolute;
+    transform: translate(-50%);
+    width: 45px;
+    left:30px;
+    bottom: 2px;
+}
+
+.img-opcao-1 {
+    position: absolute;
+    transform: translate(-50%);
+    width: 33px;
+    left:28px;
+    bottom: 9px;  
+}
+
+.btn-opcao-video{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.btn-chamadaVideo{ 
+    padding-left: 1rem;
+    width: 100%;
+  height: 54px;
+border-radius: 999px;
+margin-top: 1rem;
+background-color: var(--Cor-vermelho);
+border: none;
+cursor:pointer;
+text-transform: uppercase;
+color: var(--Cor-branco);
+font-size: 12px;
+}
+.btn-chamadanormal{
+    padding-left: 2rem;
+    width: 100%;
+  height: 54px;
+border-radius: 999px;
+margin-top: 1rem;
+background-color: var(--Cor-preta);
+border:1px solid var(--Cor-branco);
+cursor:pointer;
+text-transform: uppercase;
+color: var(--Cor-branco);
+}
+.fecharOpcao{
+    display: none;
+    position: fixed;
+ z-index: 99;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    color: #e0dfdf;
+    flex-direction: column;
+}
+.fecharOpcao.ativo{
+    display: flex;
+}
+.fecharCruz{
+    position: relative;
+    font-size: 25px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    background-color: #1a1313;
+    padding: 2px 13px;
+    border-radius: 9999px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    
+}
+.fecharCruz::before{
+    content: "";
+    position: absolute;
+       z-index: -2;
+     height: 59px;
+     width: 59px;
+    border-radius: 9999px;
+    background: rgba(255, 2, 2, 0.2);
+}
+.titulo-opcap{
+    margin-bottom: 1rem;
+}
+.titulo-opcap h1{
+    font-size: 20px;
+    text-align: center;
+}
+.titulo-opcap p{
+    font-size: 12px;
+    text-align: center;
+}
+
+.carde-numeros{
+    display: flex;
+    margin-bottom: 1rem;
+    margin-top: 4rem;
+    background-color: #e0dfdf;
+}
+.paragrafos{
+    font-weight: 800;
+}
+.caixa-nuemros h2{
+    font-size: 35px;
+    font-weight: 700;
+}
+.img-acesso-rapido{
+    width: 55px;
+    filter: brightness(0) invert(1);
+}
+.Apoio button{
+     
+   background:none;
+   border-radius: 50%;
+   padding: 5px;
+   border: none;
+}
+.OPCAOES-DAS-MARCACOES{
+     position: absolute;
+     left: 100%;
+     transform: translate(-50%);
+     top: 24rem; 
+}
+/*MODAL SAUDE OCUPACIONAL */
+
+.Modal-inf{
+        display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: end;
+    align-items: center;
+    z-index: 1000;
+    animation:  SLIDER 2s ease;
+}
+
+@keyframes SLIDER {
+    from{
+        opacity: 0;
+        transform: translateX(25PX);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.Modal-inf.ativo{
+    display: flex;
+}
+.caida-modal{
+    background-color: #fffefe;
+    padding:  10px 25px;
+    height: 100vh;
+    
+}
+.titulo-modal{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 1rem;
+}
+.titulo-modalh2{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0;
+}
+.SOS{
+    color: var(--Cor-branco);
+}
+.medicina-trabalho{
+  
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--Cor-preta);
+}
+.medicina-trabalho h2{
+      font-size: 20px;
+}
+.medicina-trabalho span{
+    font-size: 12px;
+    font-weight: 800;
+}
+.medicina-trabalho p{
+    font-size: 13px;   
+}
+.medicina-trabalho a{
+    text-decoration: none;
+    color: #000;
+}
+.horario{
+    margin-top: 2rem;
+}
+/*MODAL SAUDE OCUPACIONAL */
+
+.titulo-hero {
+    font-size: clamp(43px, 4vw, 54px);
+    color: var(--Cor-branco);
+    z-index: 2;
+    line-height: 4rem;
+    margin-bottom: 1rem;
+}
+
+.subtitulo-hero {
+    color: var(--Cor-branco);
+    z-index: 2;
+    margin-bottom: 4rem;
+    font-weight: 200;
+}
+
+.btn-hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 230px;
+}
+
+.btn-hero button {
+    padding: 10px 35px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--Cor-vermelho);
+    cursor: pointer;
+    color: #fff;
+    font: inherit;
+    font-weight: 500;
+    width: 230px;
+    transition: all 0.1s ease;
+}
+
+.btn-hero button:hover {
+    background-color: var(--Cor-preta);
+}
+
+.img-hero {
+    width: 20px;
+    z-index: 23;
+    filter: brightness(0) invert(1);
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+/* sobre */
+.sobre {
+    min-height: 100vh;
+    display: block;
+    overflow-x: hidden;
+}
+
+.header-sobre {
+    margin-bottom: 5rem;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+ 
+  .img-header img {
+    width: 424px;
+    max-width: none;
+    position: absolute;
+    right: 7rem;
+    bottom: 9rem;
+ 
+}
+
+.header-sobre h1 {
+    position: relative;
+    font-size: clamp(50px, 4vw, 54px);
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.header-sobre h1::before {
+    position: absolute;
+    content: "";
+    background-color: var(--Cor-vermelho);
+    border-radius: 15px;
+    height: 4px;
+    width: 60px;
+    bottom: -8px;
+}
+
+.header-sobre p {
+    font-size: 14px;
+    max-width: 500px;
+    font-weight: 100;
+}
+
+.barra {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    color: var(--Cor-branco);
+    min-height: 40vh;
+    margin-top: 5.1rem;
+}
+.carde-pacientes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.testemunhos{
+    background-color: var(--Cor-branco);
+    box-shadow: 2px 2px 13px rgba(0, 0, 0, 0.25);
+    margin-top: 2rem;
+    padding: 6px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+     align-items: start;
+    gap: 1rem;
+}
+.barra-clientes{
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    color: var(--Cor-branco);
+    min-height: 40vh;
+    margin-top: 5.1rem;
+}
+.img-testemunfo {
+    display: block;
+    width: 109px;
+    border-radius: 99px;
+    border: 4px solid rgba(175, 168, 168, 0.6)
+}
+.nome-paciente h2{
+    font-size: 18px;
+    font-weight: 900;
+}
+.nome-paciente p{
+    color: #918f8f;
+    font-weight: 800;
+    font-size: 14px;
+    margin-bottom: 1rem;
+}
+.nome-paciente span{
+   font-size: 15px;
+   font-weight: 900;
+}
+
+.carde-sobres {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+}
+
+.carde {
+    background-color: var(--Cor-vermelho);
+    padding: 16px 30px;
+    margin-top: 3rem;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3);
+}
+
+.carde h2 {
+    font-weight: 100;
+    color: var(--Cor-branco);
+    margin-bottom: 1rem;
+}
+
+.carde p {
+    font-size: 14px;
+    margin-bottom: 1rem;
+    color: var(--Cor-branco);
+    font-weight: 100;
+}
+
+.detalhes {
+    color: var(--Cor-vermelho);
+    border-left: 3px solid var(--Cor-preta);
+    position: relative;
+    left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.img-historico {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    align-items: center;
+    gap: 12px;
+}
+
+/* servicos */
+.servicos {
+    overflow-x: hidden;
+}
+
+.itens-servicos {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: center;
+    gap: 8px;
+    background-color: #e6e6e6;
+}
+
+.carde-opcao {
+    background-color: #f3f0f0;
+    padding: 24px 45px;
+    min-height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid var(--Cor-preta);
+}
+
+.Img-servico {
+    width: 24px;
+    position: absolute;
+    left: 12rem;
+    filter: brightness(0);
+    top: 10px;
+    transform: translate(-50%);
+}
+
+.btn-img {
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+}
+
+.paragrafo-servico {
+    font-size: 14px;
+    max-width: 740px;
+    margin-top: 1rem;
+}
+
+.btn-img button {
+    padding: 14px 44px;
+    border-radius: 999px;
+    border: none;
+    background: var(--Cor-vermelho);
+    color: var(--Cor-branco);
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
+.numero {
+    color: var(--Cor-vermelho);
+    font-weight: 900;
+}
+
+.barra-copmpromisso {
+    background-color: #000;
+    width: 100%;
+    color: var(--Cor-branco);
+    min-height: 40vh;
+    margin-bottom: 4rem;
+    margin-top: var(--margem-top);
+    padding: 5rem 0;
+}
+
+.titulo-opcao {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo-opcao h1 {
+    position: relative;
+    text-transform: capitalize;
+    font-size: 35px;
+}
+
+.titulo-opcao h1::before {
+    position: absolute;
+    content: "";
+    background-color: var(--Cor-vermelho);
+    height: 2px;
+    width: 64px;
+    margin-top: -1rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.titulo-opcao p {
+    margin-bottom: 2rem;
+    font-size: 15px;
+    font-weight: 300;
+    max-width: 534px;
+    text-align: center;
+}
+
+.btn-agendar {
+    display: inline-block;
+    padding: 12px 25px;
+    width: 230px;
+    text-align: center;
+    border-radius: 999px;
+    text-decoration: none;
+    background-color: var(--Cor-branco);
+    color: var(--Cor-vermelho);
+    font-weight: 700;
+}
+
+/* rodape */
+.rodape {
+    background-color: #f3f0f0;
+    color: var(--Cor-preta);
+    padding: 48px 24px 24px;
+    width: 100%;
+    position: relative;
+}
+
+.rodape a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.rodape a:hover {
+    color: var(--Cor-vermelho);
+}
+
+.carde-rodape {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1420px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--Cor-preta);
+    margin-bottom: var(--margem-top);
+}
+
+.dados-img img {
+    width: 102px;
+    display: block;
+    margin: 0 0 16px;
+}
+
+.dados-img p {
+    font-size: var(--Paragrafo);
+    max-width: 513px;
+}
+
+.rodapre-tirulo p {
+    width: 100%;
+    font-size: var(--Paragrafo);
+    text-align: center;
+}
+
+.dados-links h2,
+.dados-contactos h2 {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.dados-links h2::before,
+.dados-contactos h2::before {
+    position: absolute;
+    content: "";
+    background-color: var(--Cor-vermelho);
+    height: 2px;
+    width: 64px;
+    bottom: -10px;
+    left: 0;
+}
+
+.dados-endereco {
+    margin-bottom: 1rem;
+}
+
+.dados-endereco p {
+    font-size: 13px;
+}
+
+.lista-rodape li {
+    list-style: none;
+}
+
+/* redes sociais */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: var(--margem-top);
+}
+
+.img-redes {
+    width: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+/* ofertas e campanhas */
+.img-oferta {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+}
+
+.carde-ofertas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    align-items: center;
+}
+
+.carde-img-ofertas {
+    border: 1px solid var(--Cor-preta);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nome {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.Especialidade {
+    text-align: center;
+    background-color: var(--Cor-vermelho);
+    color: #f3f0f0;
+}
+
+/* contactos */
+.contactos {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.contactos input,
+.contactos textarea {
+    padding: 9px 44px;
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: #e6e6e6;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font: inherit;
+}
+
+.contactos textarea {
+    height: 140px;
+}
+
+/* modal */
+.container-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.container-modal.ativo {
+    display: flex;
+}
+
+.carde-modal {
+    background-color: var(--Cor-branco);
+    z-index: 1001;
+    width: 350px;
+    max-width: 92%;
+    position: relative;
+    padding: 20px 34px;
+    animation: slideUP 0.26s ease;
+}
+
+@keyframes slideUP {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.titulo-modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.titulo-modal h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.titulo-modal span {
+    cursor: pointer;
+    font-size: 22px;
+    transition: color 0.25s;
+}
+
+.titulo-modal span:hover {
+    color: var(--Cor-vermelho);
+}
+
+.inputs-modal {
+    margin-bottom: 6px;
+}
+
+.inputs-modal label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.inputs-modal input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--Cor-preta);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-size: 14px;
+    font-family: inherit;
+    border-radius: 4px;
+}
+
+.inputs-modal input:focus {
+    border-color: var(--Cor-vermelho);
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+    outline: none;
+}
+
+.botons-modal {
+    display: flex;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.botons-modal button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.botons-modal button:hover {
+    opacity: 0.82;
+}
+
+#marcar {
+    background-color: var(--Cor-vermelho);
+    color: var(--Cor-branco);
+}
+
+/* RESPONSIVIDADE (sempre no fim do ficheiro) */
+
+/* cursor personalizado so faz sentido com rato */
+@media (hover: none) {
+    .dot {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    header .container {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    nav .menu-lista ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+        font-size: 14px;
+    }
+
+    .carde-rodape {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 701px) {
+    .hero {
+        padding: 1rem 24px;
+    }
+
+    .titulo-hero {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .img-header img {
+        width: 314px;
+        position: relative;
+        right: 14rem;
+        bottom: 9rem;
+    }
+
+    .carde-sobres,
+    .carde-ofertas {
+        grid-template-columns: 1fr;
+    }
+
+    .img-historico {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .carde-historico img {
+        width: 100%;
+        max-width: 340px;
+    }
+
+    .carde-opcao {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        padding: 24px;
+    }
+}
+
+/* =====================================================
+   ANIMACOES E EFEITOS
+   Colar no FIM do css.css
+   ===================================================== */
+
+/* ---------- keyframes ---------- */
+@keyframes subir {
+    from { opacity: 0; transform: translateY(40px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes descer {
+    from { opacity: 0; transform: translateY(-100%); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes entrar-esquerda {
+    from { opacity: 0; transform: translateX(-40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes entrar-direita {
+    from { opacity: 0; transform: translateX(40px); }
+    to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-12px); }
+}
+
+@keyframes pulsar {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.55); }
+    70%  { box-shadow: 0 0 0 16px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+@keyframes brilho {
+    from { left: -80%; }
+    to   { left: 130%; }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ---------- entrada da pagina (header e hero) ---------- */
+header {
+    animation: descer 0.7s ease backwards;
+}
+
+.titulo-hero {
+    animation: subir 0.9s ease 0.2s backwards;
+}
+
+.subtitulo-hero {
+    animation: subir 0.9s ease 0.4s backwards;
+}
+
+.btn-hero {
+    animation: subir 0.9s ease 0.6s backwards;
+}
+
+.video-container video {
+    animation: aparecer 1.5s ease backwards;
+}
+
+/* ---------- revelar ao descer (usado com o JS) ---------- */
+.reveal {
+    opacity: 0;
+}
+
+.reveal.visivel {
+    opacity: 1;
+    animation: subir 0.8s ease backwards;
+    animation-delay: var(--d, 0s);
+}
+
+.reveal.da-esquerda.visivel {
+    animation-name: entrar-esquerda;
+}
+
+.reveal.da-direita.visivel {
+    animation-name: entrar-direita;
+}
+
+/* ---------- menu ---------- */
+.menu-lista a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-lista a:hover {
+    color: var(--Cor-vermelho);
+    transform: translateY(-2px);
+}
+
+.menu-lista a::before {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-lista a:hover::before {
+    transform: translate(-50%) scale(1.6);
+}
+
+.img-header {
+    transition: transform 0.3s ease;
+}
+
+header .container > a:hover .img-header,
+header .container > .img-header:hover {
+    transform: scale(1.06);
+}
+
+/* ---------- botoes ---------- */
+.btn-hero button,
+.btn-img button,
+.btn-agendar,
+.botons-modal button {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+}
+
+/* brilho que passa pelo botao */
+.btn-hero button::before,
+.btn-img button::before,
+.btn-agendar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.btn-hero button:hover::before,
+.btn-img button:hover::before,
+.btn-agendar:hover::before {
+    animation: brilho 0.7s ease;
+}
+
+.btn-hero button:hover,
+.btn-img button:hover,
+.btn-agendar:hover,
+.botons-modal button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.btn-hero button:active,
+.btn-img button:active,
+.btn-agendar:active,
+.botons-modal button:active {
+    transform: translateY(0) scale(0.97);
+    box-shadow: none;
+}
+
+/* botao principal do hero pulsa de leve para chamar atencao */
+.btn-hero button {
+    animation: pulsar 2.4s ease-out 1.5s infinite;
+}
+
+.btn-hero button:hover {
+    animation: none;
+}
+
+/* seta do botao avanca ao passar o rato */
+.img-hero {
+    transition: right 0.3s ease;
+}
+
+.btn-hero:hover .img-hero {
+    right: 12px;
+}
+
+/* ---------- cards: missao, visao, valores ---------- */
+.carde {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+}
+
+.carde:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.35);
+    background-color: #d90000;
+}
+
+/* ---------- cards de servicos ---------- */
+.carde-opcao {
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+}
+
+.carde-opcao:hover {
+    transform: translateX(8px);
+    box-shadow: -6px 6px 0 var(--Cor-vermelho);
+    border-color: var(--Cor-vermelho);
+    background-color: #fff;
+}
+
+.numero {
+    display: inline-block;
+    transition: transform 0.35s ease;
+}
+
+.carde-opcao:hover .numero {
+    transform: scale(1.25);
+}
+
+/* ---------- fotos dos funcionarios ---------- */
+.carde-historico {
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.carde-historico img {
+    display: block;
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.carde-historico:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 26px rgba(0, 0, 0, 0.25);
+}
+
+.carde-historico:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.08) saturate(1.1);
+}
+
+.carde-historico legend {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.carde-historico:hover legend {
+    color: var(--Cor-vermelho);
+    transform: translateX(6px);
+}
+
+/* ---------- imagem do "Sobre Nos" flutua ---------- */
+.img-header img {
+    animation: flutuar 5s ease-in-out infinite;
+}
+
+/* ---------- detalhes com linha que cresce ---------- */
+.detalhes {
+    transition: border-left-width 0.4s ease, padding-left 0.4s ease;
+}
+
+.detalhes:hover {
+    border-left-width: 8px;
+    padding-left: 12px;
+}
+
+/* ---------- titulos: linha vermelha que cresce ---------- */
+.header-sobre h1::before,
+.dados-links h2::before,
+.dados-contactos h2::before {
+    transition: width 0.5s ease;
+}
+
+.header-sobre h1:hover::before,
+.dados-links:hover h2::before,
+.dados-contactos:hover h2::before {
+    width: 110px;
+}
+
+/* ---------- ofertas ---------- */
+.carde-img-ofertas {
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.img-oferta {
+    transition: transform 0.6s ease;
+}
+
+.carde-img-ofertas:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carde-img-ofertas:hover .img-oferta {
+    transform: scale(1.07);
+}
+
+.Especialidade {
+    transition: background-color 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.carde-img-ofertas:hover .Especialidade {
+    background-color: var(--Cor-preta);
+    letter-spacing: 1px;
+}
+
+/* ---------- formulario de contactos ---------- */
+.contactos input,
+.contactos textarea {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+.contactos input:focus,
+.contactos textarea:focus {
+    background-color: #fff;
+    border-color: var(--Cor-vermelho);
+    box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.15);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.contactos label {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.contactos button {
+    padding: 12px 40px;
+    border-radius: 999px;
+    border: none;
+    background-color: var(--Cor-vermelho);
+    color: var(--Cor-branco);
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.contactos button:hover {
+    background-color: var(--Cor-preta);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* ---------- selector de idioma ---------- */
+.linguagem {
+    transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.linguagem:hover {
+    transform: translateY(-2px);
+}
+
+/* ---------- rodape ---------- */
+.rodape a {
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.rodape a:hover {
+    transform: translateX(5px);
+}
+
+.img-redes {
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.redes-sociais a:hover .img-redes,
+.img-redes:hover {
+    transform: translateY(-5px) scale(1.25);
+}
+
+.dados-img img {
+    transition: transform 0.4s ease;
+}
+
+.dados-img img:hover {
+    transform: rotate(-4deg) scale(1.08);
+}
+
+/* ---------- modal ---------- */
+.container-modal.ativo {
+    animation: aparecer 0.25s ease;
+}
+
+.titulo-modal span {
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.titulo-modal span:hover {
+    transform: rotate(90deg);
+}
+
+/* ---------- respeitar quem prefere menos movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .reveal {
+        opacity: 1;
+    }
+}
